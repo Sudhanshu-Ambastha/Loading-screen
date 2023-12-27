@@ -1,0 +1,76 @@
+<!Docktype html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: #0d0d0d;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto;
+  }
+  .counter {
+    text-align: center;
+    p {
+        font-size: 40px;
+        font-weight: 100;
+        color: #2cf60d;
+    }
+    h1 {
+      color: #fffb00;
+      font-size: 60px;
+      margin-top: -10px;
+    }
+    hr {
+        height: 1px;
+        border: 1px solid #2cf60d;
+        }
+    }
+    .counter {
+        position: relative;
+        width: 200px;
+        h1.abs {
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .color {
+            width: 0px;
+            overflow: hidden;
+            color: #f60d54;
+        }
+  }
+</style>   
+</head>
+<body>
+    <div class="loading-page">
+        <div class="counter">
+          <p>loading...</p>  
+          <h1>0%</h1>
+          <hr/>>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            var counter = 0;
+            var c =0;
+            var i = setInterval(function(
+              ){
+              $(".loading-page .counter h1").html(c + "%");
+              $(".loading-page .counter hr").css("width", c + "%");
+              counter++;
+              C++;
+              if(counter == 101) {
+                clearInterval(i);
+              }  
+            }, 50);
+        });    
+    </script>
+</body>
+</html>
